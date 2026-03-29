@@ -32,7 +32,9 @@ const Gallery = () => {
         { y: "150%", scale: 0.8 },
         { y: "0%", scale: 1.1 },
         "-=0.5",
-      );
+      )
+      // Fade everything out at the end so it smoothly disappears before scrolling to the next section
+      .to(".devices-container", { opacity: 0, scale: 0.9, duration: 1 }, "+=0.3");
     return () => ScrollTrigger.getAll().forEach((t) => t.kill());
   }, []);
   return (
@@ -43,7 +45,7 @@ const Gallery = () => {
           <div className="device-wrapper mobile left">
             <div className="device-screen">
               <video
-                src="/src/assets/videos/videoplayback (2).mp4"
+                src="/videos/videoplayback (2).mp4"
                 autoPlay
                 muted
                 loop
@@ -57,7 +59,7 @@ const Gallery = () => {
           <div className="device-wrapper laptop">
             <div className="device-screen">
               <video
-                src="/src/assets/videos/videoplayback (1).mp4"
+                src="/videos/videoplayback (1).mp4"
                 autoPlay
                 muted
                 loop
@@ -71,7 +73,7 @@ const Gallery = () => {
           <div className="device-wrapper mobile right">
             <div className="device-screen">
               <video
-                src="/src/assets/videos/videoplayback.mp4"
+                src="/videos/videoplayback.mp4"
                 autoPlay
                 muted
                 loop
