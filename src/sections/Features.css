@@ -1,0 +1,124 @@
+body {
+  line-height: 1.6;
+}
+.business-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background-image: radial-gradient(
+    circle at top right,
+    #1a1512 0%,
+    #12100f 50%
+  );
+}
+.business-page__container {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+}
+.business-page__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.business-page__title {
+  font-family: "Fraunces", serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #ffffff;
+}
+.business-page__title--highlight {
+  color: #ff4d4d;
+  font-style: italic;
+}
+.text--italic-red {
+  color: #ff4d4d;
+  font-style: italic;
+}
+.text--red {
+  color: #ff4d4d;
+}
+.text--underline {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.business-page__quote {
+  border-left: 2px solid #ff4d4d;
+  padding-left: 1.5rem;
+  font-size: 24px;
+  color: #c0c0c0;
+}
+.business-page__features {
+  width: 100%;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.feature-card {
+  background-color: #1c1a18;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  transition: all 0.5s ease;
+  cursor: default;
+
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: #3a3836;
+  border: 1px solid #ff4d4d;
+}
+.feature-card__icon-box {
+  width: 45px;
+  height: 45px;
+  background-color: rgba(255, 77, 77, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: #ff4d4d;
+  font-size: 1.2rem;
+}
+.feature-card__title {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.feature-card__text {
+  font-size: 15px;
+  color: #888888;
+  line-height: 1.5;
+}
+@media (max-width: 1024px) {
+  .business-page__container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .business-page__title {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 640px) {
+  .business-page {
+    padding: 2rem 1rem;
+  }
+  .business-page__title {
+    font-size: 2.25rem;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  .feature-card {
+    padding: 2rem 1.5rem;
+  }
+}

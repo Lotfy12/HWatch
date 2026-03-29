@@ -1,0 +1,86 @@
+.featured-section {
+  height: 100vh;
+  width: 100%;
+  background-color: #f3ede4;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.content-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15vw;
+  font-family: "Fraunces", serif;
+  color: rgba(212, 24, 24, 0.534);
+  white-space: nowrap;
+  pointer-events: none;
+}
+.devices-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.device-wrapper {
+  position: absolute;
+  will-change: transform;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mobile .device-screen {
+  width: 200px;
+  height: 400px;
+  background: #000;
+  border-radius: 30px;
+  border: 8px solid #222;
+  overflow: hidden;
+  box-shadow: 0 50px 100px rgba(0, 0, 0, 0.2);
+}
+.laptop .device-screen {
+  width: 500px;
+  height: 320px;
+  background: #000;
+  border-radius: 10px;
+  border: 12px solid #333;
+  overflow: hidden;
+  box-shadow: 0 60px 120px rgba(0, 0, 0, 0.3);
+}
+.device-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.device-label {
+  margin-top: 20px;
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-size: 24px;
+  color: #333;
+}
+.device-screen iframe,
+.device-screen video {
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
+}
+.device-screen video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #000;
+}

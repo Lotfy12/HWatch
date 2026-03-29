@@ -1,0 +1,236 @@
+.ds-section {
+  background-color: #0a0a0a;
+  color: #ffffff;
+  padding: 100px 20px;
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.ds-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.bg-blob {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 77, 77, 0.1) 0%,
+    transparent 70%
+  );
+  filter: blur(60px);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+}
+.blob-1 {
+  top: -10%;
+  left: -10%;
+  animation: float 20s infinite ease-in-out;
+}
+.blob-2 {
+  bottom: 10%;
+  right: -5%;
+  animation: float 25s infinite ease-in-out reverse;
+}
+.blob-3 {
+  top: 40%;
+  left: 30%;
+  animation: float 30s infinite linear;
+  opacity: 0.5;
+}
+@keyframes float {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  25% {
+    transform: translate(60px, -80px) scale(1.1);
+  }
+  50% {
+    transform: translate(-40px, 40px) scale(0.95);
+  }
+  75% {
+    transform: translate(30px, 70px) scale(1.05);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+.blob-1 {
+  top: -10%;
+  left: -10%;
+  animation: float 18s ease-in-out infinite;
+}
+.blob-2 {
+  bottom: 10%;
+  right: -5%;
+  animation: float 25s ease-in-out infinite reverse;
+}
+.blob-3 {
+  top: 40%;
+  left: 30%;
+  animation: float 32s ease-in-out infinite;
+  opacity: 0.5;
+}
+.blob-1 {
+  animation-delay: 0s;
+}
+.blob-2 {
+  animation-delay: -5s;
+}
+.blob-3 {
+  animation-delay: -10s;
+}
+.bg-blob {
+  filter: blur(80px);
+  opacity: 0.7;
+}
+@keyframes float {
+  0% {
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
+  }
+  25% {
+    transform: translate(60px, -80px) scale(1.1) rotate(20deg);
+  }
+  50% {
+    transform: translate(-40px, 40px) scale(0.95) rotate(-15deg);
+  }
+  75% {
+    transform: translate(30px, 70px) scale(1.05) rotate(10deg);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
+  }
+}
+.bg-blob {
+  transition: transform 0.3s ease-out;
+}
+.ds-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+.ds-title {
+  font-family: "Fraunces", serif;
+  font-size: clamp(2.5rem, 6vw, 72px);
+  line-height: 1;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.ds-title-highlight {
+  color: #ff4d4d;
+  font-style: italic;
+  position: relative;
+}
+.ds-subtitle {
+  font-size: 1.2rem;
+  color: #888;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.ds-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+.col-span-2 {
+  grid-column: span 2;
+}
+.ds-card {
+  background-color: rgba(22, 20, 18, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid #222;
+  border-radius: 30px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.ds-card:hover {
+  border-color: #ff4d4d;
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(255, 77, 77, 0.05);
+}
+.ds-icon-box {
+  width: 60px;
+  height: 60px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.ds-card h3 {
+  font-family: "Fraunces";
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.ds-card p {
+  color: #777;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.pulse-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  height: 100px;
+}
+.skeleton-rect {
+  flex: 1;
+  border-radius: 4px;
+}
+.stats-box .value {
+  font-size: 48px;
+  font-weight: 900;
+  color: #fff;
+  font-family: "Inter";
+}
+.stats-box .trend {
+  color: #00c853;
+  font-size: 14px;
+  font-weight: bold;
+}
+.nav-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.radar-circle {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #ff4d4d;
+  border-radius: 50%;
+}
+.nav-dot {
+  width: 8px;
+  height: 8px;
+  background: #ff4d4d;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 0 15px #ff4d4d;
+}
+@media (max-width: 1024px) {
+  .ds-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .col-span-2 {
+    grid-column: span 1;
+  }
+}
+@media (max-width: 768px) {
+  .ds-grid {
+    grid-template-columns: 1fr;
+  }
+  .ds-title {
+    font-size: 3rem;
+  }
+}

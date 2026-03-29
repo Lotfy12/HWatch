@@ -1,0 +1,107 @@
+.faq-section {
+  background-color: #0d0b0a;
+  padding: 100px 20px;
+  color: #fff;
+}
+.faq-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.question-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #333;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  color: #888;
+}
+.question-tag span {
+  background: #222;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.faq-title {
+  font-family: "Fraunces", serif;
+  font-size: clamp(2.5rem, 5vw, 64px);
+  line-height: 1.1;
+  margin-bottom: 60px;
+  font-weight: 900;
+}
+.highlight {
+  color: #ff4d4d;
+  font-style: italic;
+}
+.highlight-alt {
+  color: #ff4d4d;
+}
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.faq-card {
+  background: #161412;
+  border: 1px solid #222;
+  border-radius: 20px;
+  padding: 30px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  height: fit-content;
+}
+.faq-card:hover {
+  border-color: #444;
+}
+.faq-card.active {
+  border-color: #ff4d4d;
+}
+.card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+}
+.card-number {
+  font-size: 14px;
+  font-family: "Fraunces";
+  color: #555;
+  margin-top: 5px;
+}
+.card-question {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #eee;
+  flex: 1;
+  line-height: 1.4;
+}
+.plus-icon {
+  font-size: 28px;
+  color: #555;
+  line-height: 1;
+}
+.card-answer {
+  overflow: hidden;
+  padding-left: 38px;
+}
+.card-answer p {
+  color: #888;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+@media (max-width: 768px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+  .faq-title {
+    font-size: 3rem;
+  }
+}
