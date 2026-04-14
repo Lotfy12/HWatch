@@ -9,8 +9,8 @@ A website that aims to display watches in a beautiful, modern style using variou
 
 
 - **React.js** as the React framework
-- **gsap ** for styling
-- **framer-motion** for notification
+- **GSAP** for Motion
+- **framer-motion** for Motion 
 - **react-dom** for icons
 ---
 
